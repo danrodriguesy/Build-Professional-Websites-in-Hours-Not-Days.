@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+55 templates editáveis Wordpress</title>
+    <style>
+        * {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 1.8rem;
+            text-align: center;
+            padding: 0 1rem;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-weight: 100;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        #hero {
+            height: 100vh;
+            background-color: #FFF;
+            padding: auto !important;
+        }
+
+        .container,
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: space-evenly;
+        }
+
+        .carousel-sites {
+            width: 100%;
+            overflow: hidden;
+            padding: 30px 0;
+            /* background: #050505; */
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            animation: scrollSites 25s linear infinite;
+        }
+
+        .carousel-track img {
+            width: 360px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 50px rgba(238, 238, 238, 0.45);
+        }
+
+        @keyframes scrollSites {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .carousel-track img {
+                width: 260px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-track img {
+                width: 280px;
+                height: 170px;
+            }
+        }
+
+        button {
+            margin: 1rem auto;
+            display: flex;
+            border: 0;
+            background-color: #FFF;
+            border: 1px solid #000;
+            color: #000;
+            padding: 1rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .containerPrice {
+            margin-top: 2rem;
+        }
+
+        .price {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            border: 0;
+            color: #000;
+            font-size: 2.6rem;
+            font-weight: 600;
+            justify-content: center;
+        }
+
+        .oldPrice {
+            margin: 0rem auto;
+            padding: 0;
+            display: flex;
+            border: 0;
+            text-decoration: line-through;
+            color: #444;
+            font-size: 1.2rem;
+            font-weight: 600;
+            justify-content: center;
+        }
+
+        #benefits {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #cards-beneficios {
+            background-color: #000;
+            padding: 1rem;
+        }
+
+        h3 {
+            color: #FFF;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+        }
+
+        .card {
+            border: 1px solid #444;
+            padding: 1rem;
+            border-radius: 1rem;
+            height: 100px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card-text {
+            color: #FFFF;
+        }
+
+        #delivery {
+            background-color: #FFF;
+        }
+
+        #delivery h3 {
+            color: #000;
+        }
+
+        .carousel-track-reverse {
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            animation: scrollReverse 25s linear infinite;
+        }
+
+        .carousel-track-reverse img {
+            width: 360px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        @keyframes scrollReverse {
+            from {
+                transform: translateX(-50%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-track-reverse img {
+                width: 280px;
+                height: 170px;
+            }
+        }
+        #bonus {
+            background: #fff;
+        }
+        #bonus h3 {
+            color: #000;
+        }
+        #bonus .description {
+            text-align: center;
+            color: #000;
+            margin-bottom: 5rem;
+        }
+        #bonus img {
+            padding: 1rem;
+            width: 90%;
+            border-radius: 2rem;
+        }
+        #bonus h4 {
+            color: #000;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        #bonus i {
+            color: #000;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        #garantia {
+            background-color: #Fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        #garantia h3 { 
+            color: #000;
+        }
+        #garantia p { 
+            color: #000;
+        }
+        #offer {
+            background-color: #fff;
+        }
+        .btn {
+            background: #fff;
+            color: #111;
+            width: 100%;
+            max-width: 420px;
+            font-weight: 700;
+            padding: 1rem;
+            border-radius: 2rem;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="hero">
+        <div class="container">
+            <div class="content">
+                <div>
+                    <h1>Build Professional Websites in Hours, Not Days.</h1>
+                    <!-- <h1>+55 Templates <br />Premium para criar sites profissionais em minutos</h1> -->
+                    <h2>Get instant access to 55+ premium WordPress templates designed to help you launch stunning websites without starting from scratch.
+                    </h2>
+                </div>
+                <div class="carrossel">
+                    <section class="carousel-sites">
+                        <div class="carousel-track">
+                            
+                            <img src="banner15.avif" alt="Template de site 1">
+                            
+                            <img src="banner14.avif" alt="Template de site 2"
+                            <img src="banner11.avif" alt="Template de site 3">
+                            <img src="banner11.avif" alt="Template de site 4">
+                            <img src="banner.avif" alt="Template de site 5">
+                            <img src="banner7.avif" alt="Template de site 6">
+                            <img src="banner4.avif" alt="Template de site 7">
+                            <img src="banner5.avif" alt="Template de site 8">
+                            <img src="banner10.avif" alt="Template de site 9">
+                            <img src="banner3.avif" alt="Template de site 10">
+                            <img src="banner6.avif" alt="Template de site 11">
+                            
+                            
+                            <img src="banner2.avif" alt="Template de site 12">
+
+                            <!-- repete para loop infinito -->
+                            
+                            
+                            <img src="banner14.avif" alt="Template de site 13" />
+                            <img src="banner11.avif" alt="Template de site 14" />
+                            
+                            <img src="banner.avif" alt="Template de site 15" />
+                            <img src="banner2.avif" alt="Template de site 16" />
+                            <img src="banner4.avif" alt="Template de site 17" />
+                            <img src="banner15.avif" alt="Template de site 18" />
+                            <img src="banner5.avif" alt="Template de site 19" />
+                            <img src="banner10.avif" alt="Template de site 20" />
+                            <img src="banner11.avif" alt="Template de site 21" />
+                            <img src="banner3.avif" alt="Template de site 22" />
+                            <img src="banner6.avif" alt="Template de site 3" />
+                            <img src="banner7.avif" alt="Template de site 24" />
+                            
+                            
+                        </div>
+                    </section>
+                </div>
+                <div id="benefits">
+                    <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg> 100% Editable with Elementor</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg> Modern & Responsive Design</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg> Launch Projects Faster</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg> Works for Any Business or Niche</span>
+                </div>
+                <div>
+                    <div class="containerPrice">
+                        <span class="oldPrice">
+                            $110,00
+                        </span>
+                        <span class="price">
+                            $4,99
+                        </span>
+                    </div>
+                    <a href="https://pay.kiwify.com.br/MBvy9Cm">
+                        <button>
+                            Get Instant Access <svg fill="#000000" height="200px" width="200px" version="1.1" id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 297 297" xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <path
+                                            d="M148.5,0C66.485,0,0,66.485,0,148.5S66.485,297,148.5,297S297,230.515,297,148.5S230.515,0,148.5,0z M91.972,230.051 l32.016-81.504L91.972,66.449l131.057,81.371L91.972,230.051z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cards-beneficios">
+        <div class="container">
+            <div class="content">
+                <h3>Perfect for Anyone Looking to Build Professional Websites Faster</h3>
+                <br />
+                <!-- <div class="card">
+                    <h4>Freelancers</h4>
+                    <p class="card-text">Crie e entregue projetos mais rápido</p>
+                </div>
+                <div class="card">
+                    <h4>Agências</h4>
+                    <p class="card-text">Ganhe produtividade no WordPress</p>
+                </div>
+                <div class="card">
+                    <h4>Iniciantes</h4>
+                    <p class="card-text">Crie sites profissionais facilmente</p>
+                </div>
+                <div class="card">
+                    <h4>Designers</h4>
+                    <p class="card-text">Use layouts premium prontos para editar</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="delivery">
+        <div class="container">
+            <div class="content">
+                <h3>What's Included</h3>
+                <br />
+                <div id="benefits">
+                    <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg> 55+ Premium WordPress Templates</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg> Ready-to-Edit Landing Pages</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg> Mobile-Friendly Designs</span>
+                        <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg> Templates for Multiple Industries</span>
+
+                        <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg> Instant Download</span>
+
+                        <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg> Lifetime Access</span>
+                        
+                </div>
+                <div class="carrossel">
+                    <section class="carousel-sites reverse">
+                        <div class="carousel-track-reverse">
+                            <img src="banner10.avif" alt="Template de site 24" />
+                            <img src="banner11.avif" alt="Template de site 25" />
+                            <img src="banner12.avif" alt="Template de site 26" />
+                            <img src="banner13.avif" alt="Template de site 27" />
+                            <img src="banner14.avif" alt="Template de site 28" />
+                            <img src="banner15.avif" alt="Template de site 29" />
+                            <img src="banner.avif" alt="Template de site 30" />
+                            <img src="banner9.avif" alt="Template de site 31" />
+                            <img src="banner8.avif" alt="Template de site 32" />
+                        </div>
+                    </section> 
+                    <section class="carousel-sites">
+                        <div class="carousel-track">
+                            <img src="banner10.avif" alt="Template de site 33" />
+                            <img src="banner11.avif" alt="Template de site 34" />
+                            <img src="banner12.avif" alt="Template de site 35" />
+                            <img src="banner13.avif" alt="Template de site 36" />
+                            <img src="banner14.avif" alt="Template de site 37" />
+                            <img src="banner15.avif" alt="Template de site 38" />
+                            <img src="banner2.avif" alt="Template de site 39" />
+                            <img src="banner9.avif" alt="Template de site 40" />
+                            <img src="banner8.avif" alt="Template de site 41" />
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="bonus">
+        <div class="container">
+            <div class="content">
+                <h3>Você recebe junto com os templates</h3>
+                <br />
+                <h4>Bônus #1 <br /> +50 Blocos Premium prontos para editar</h4>
+                <i>Hero sections, FAQ, CTA, <br />  depoimentos e muito mais.</i>
+                <img src="mockup1bonus.png" />
+
+                <br />
+                <h4>Bônus #2 <br /> 6 temas Premium para Lançamento de produto</h4>
+                <i>Templates Wordpress editáveis de alta conversão para lançamento de produto</i>
+                <img src="mockup2bonus.png" />
+            </div>
+        </div>
+    </div> -->
+
+
+    <div id="garantia">
+        <div class="container">
+            <div class="content">
+                <h3>7-Day Money-Back Guarantee</h3>
+                <p>Explore all templates risk-free for 7 days. If you're not completely satisfied, simply request a refund and get your money back.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="offer">
+        <div class="container">
+
+            <div style="
+            background: #111;
+            border-top-left-radius: 32px;
+            border-top-right-radius: 32px;
+            padding: 48px 32px;
+            text-align: center;
+            color: #fff;
+        ">
+
+                <p style="
+                font-size: .9rem;
+                text-transform: uppercase;
+                letter-spacing: .08em;
+                color: rgba(255,255,255,.7);
+                margin-bottom: 24px;
+                font-weight: 600;
+            ">
+                    Instant Access
+                </p>
+
+                <h1 style="
+                font-size: clamp(3rem, 7vw, 5rem);
+                line-height: 1;
+                margin-bottom: 32px;
+                color: #fff;
+            ">
+                    $4,99
+                </h1>
+
+                <div style="
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                align-items: center;
+                margin-bottom: 40px;
+            ">
+
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color: rgba(255,255,255,.85);
+                ">
+                        <span>✔</span>
+                        <span>55+ Editable Elementor & WordPress Templates</span>
+                    </div>
+
+                    <div style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color: rgba(255,255,255,.85);
+                ">
+                        <span>✔</span>
+                        <span>7-Day Money-Back Guarantee</span>
+                    </div>
+
+
+
+                    <div style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color: rgba(255,255,255,.85);
+                ">
+                        <span>✔</span>
+                        <span>Lifetime Access</span>
+                    </div>
+
+                </div>
+
+                <a href="https://pay.kiwify.com.br/MBvy9Cm" class="btn">
+                    INSTANT ACCESS
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1304698611281106');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1304698611281106&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</body>
+
+</html>
